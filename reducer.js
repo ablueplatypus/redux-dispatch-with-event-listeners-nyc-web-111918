@@ -16,7 +16,7 @@ function dispatch(action){
 
 function render(){
     let container = document.querySelector('#container');
-    container.textContent = state.count;
+    container.innerHTML = state.count;
 }
 
 dispatch({type: 'beef'})
@@ -25,6 +25,6 @@ let button = document.querySelector('#button');
 
 button.addEventListener('click', () => {
     // here the dispatch is resetting state. like setState would in React.
-    //The state is being set to the action type that we would like to update. 
+    //The state is being set to the action type that we would like to update.
     dispatch({type: 'INCREASE_COUNT'})
 })
